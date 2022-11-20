@@ -1,3 +1,6 @@
-mylist = ["a", "b", "a", "c", "c"]
-mylist = list(dict.fromkeys(mylist))
-print(mylist)
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, Docker!'
